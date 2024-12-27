@@ -33,12 +33,20 @@
                 ToDo一覧
               </div>
               <div class="list-group list-group-flush">
+                @foreach ($todos as $todo)
+                  <div class="d-flex align-items-center p-2">
+                    <span class="col-9">{{ $todo->content }}</span>
+                  </div>
+                @endforeach
               </div>
             </div>
           </div>
         </div>
-     </div>
+    </div>
     </main>
   </div>
 </body>
 </html>
+
+<!-- ユーザーからの入力をそのまま表示する場合（特にフォームの入力内容など）は、必ず {{ }} を使ってHTMLをエスケープし、XSS攻撃を防ぎましょう。
+HTMLを表示する必要がある場合でも、例えば{!! !!}を使っても良いですが、その内容が信頼できるものであることを確認してから使用するようにしましょう。 -->
