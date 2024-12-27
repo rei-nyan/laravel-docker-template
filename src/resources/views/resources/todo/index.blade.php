@@ -28,6 +28,9 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8">
+            <p class="text-left">
+              <a class="btn btn-success" href="http://localhost:8080/todo/create">ToDoを追加</a>
+            </p>
             <div class="card">
               <div class="card-header">
                 ToDo一覧
@@ -47,6 +50,3 @@
   </div>
 </body>
 </html>
-
-<!-- ユーザーからの入力をそのまま表示する場合（特にフォームの入力内容など）は、必ず {{ }} を使ってHTMLをエスケープし、XSS攻撃を防ぎましょう。
-HTMLを表示する必要がある場合でも、例えば{!! !!}を使っても良いですが、その内容が信頼できるものであることを確認してから使用するようにしましょう。 -->

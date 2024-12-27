@@ -16,4 +16,11 @@ class TodoController extends Controller
         return view('resources.todo.index', ['todos' => $todos]);
         // 修正
     }
+
+    public function create()
+    {
+        TODO::all();
+        return view('resources.todo.create'); // 追記
+    }
+    
 }
