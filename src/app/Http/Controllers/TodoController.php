@@ -8,6 +8,6 @@ class TodoController extends Controller
 {
     public function index()
     {
-        return view(''); // 修正
+        return view('resources.todo.index'); // 修正
     }
 }
