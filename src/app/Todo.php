@@ -8,4 +8,8 @@ class Todo extends Model
 {
     // 追加
     protected $table = 'todos';
+
+    protected $fillable = [
+        'content',
+    ];
 }
