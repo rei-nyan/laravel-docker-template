@@ -6,12 +6,14 @@
       <div class="card-header">ToDo編集</div>
       <div class="card-body">
         <form method="POST" action="{{ route('todo.update', $todo->id) }}">
+          <!-- 第二引数　特定のToDoアイテムの詳細ページへのリンクを作成-->
           @csrf
           @method('PUT')
           <div class="form-group row">
             <label for="name" class="col-md-4 col-form-label text-md-right">ToDo入力</label>
             <div class="col-md-6">
-              <input type="text" class="form-control @if($errors->has('content')) border-danger @endif" name="content" value="">
+              <input type="text" class="form-control @if($errors->has('content')) border-danger @endif" name="content" value="{{ $todo->content }}">
+              <!-- value="{{ $todo->content }}" $todo の content プロパティの値を表示する -->
               @if($errors->has('content'))
                 <span class="text-danger">{{ $errors->first('content') }}</span>
               @endif

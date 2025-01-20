@@ -6,7 +6,15 @@
               <div class="card-header">ToDo作成</div>
               <div class="card-body">
                 <form method="POST" action="{{ route('todo.store') }}">
+                  <!-- route()関数は名前付きルートのURLを生成するための関数 -->
+                　<!-- route第一引数↓ -->
+                  <!--  ルート名　web.phpで定義されたルートに名前を付けたもので、その名前を使って URL を生成 -->
+                  <!-- 返り値↓-->
+                  <!-- ＵＲＬ -->
                   @csrf
+                  <!-- 何に置き換わっているのか -->
+                  <!-- <input type="hidden" name="_token" value="トークン"> -->
+                  <!-- トークンが送信されておらず無効なページと判断される -->
                   
                   <div class="form-group row">
                     <label for="name" class="col-md-4 col-form-label text-md-right">ToDo入力</label>
