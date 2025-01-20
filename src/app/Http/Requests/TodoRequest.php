@@ -27,6 +27,7 @@ class TodoRequest extends FormRequest
             'content' => 'required|max:255',
         ];
     }
+    //required＝必須
 
     public function messages()
     {
